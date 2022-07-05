@@ -21,6 +21,9 @@ function Navbar() {
           <li>
             <Link to="/conditional-fetching">Conditional Fetching</Link>
           </li>
+          <li>
+            <Link to="/dependent">Dependent</Link>
+          </li>
         </ul>
       </nav>
     </div>

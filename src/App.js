@@ -7,6 +7,7 @@ import Home from "./components/Design/Home";
 import Navbar from "./components/Navbar";
 import RefreshInterval from "./components/RefreshInterval";
 import ConditionalFetching from "./components/ConditionalFetching";
+import Dependent from "./components/Dependent";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="axios" element={<Axios />} />
         <Route path="refreshinterval" element={<RefreshInterval />} />
         <Route path="conditional-fetching" element={<ConditionalFetching />} />
+        <Route path="dependent" element={<Dependent />} />
       </Routes>
     </div>
   );
