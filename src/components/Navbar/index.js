@@ -15,6 +15,9 @@ function Navbar() {
           <li>
             <Link to="/axios">Axios</Link>
           </li>
+          <li>
+            <Link to="/refreshinterval">RefreshInterval</Link>
+          </li>
         </ul>
       </nav>
     </div>

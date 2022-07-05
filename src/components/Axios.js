@@ -18,6 +18,8 @@ function Axios() {
   }
   return (
     <div>
+      <h1>Axios kullanımı</h1>
+      <hr />
       {data &&
         data.map((video) => (
           <h3 key={video.id}>

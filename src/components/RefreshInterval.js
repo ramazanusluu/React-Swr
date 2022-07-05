@@ -1,15 +1,18 @@
 import React from "react";
 import useSWR from "swr";
+import axios from "axios";
 
 const endpoint = "http://localhost:3000/videos";
+const fetcher = (url) =>
+  axios.get(url).then((res) => {
+    console.log("Working");
+    return res.data;
+  });
 
-// const fetcher = (...args) => fetch(...args).then((res) => res.json());
-//! Global olarak src/index.js içerinde fetcher fonksiyonu tanımlandı.
-
-function QuickStart() {
-  const { data, isValidating, error } = useSWR(endpoint);
-
-  console.log({ isValidating, data });
+function RefreshInterval() {
+  const { data, error } = useSWR(endpoint, fetcher, {
+    refreshInterval: 2,
+  });
 
   if (error) {
     return <div>failed to load</div>;
@@ -19,7 +22,7 @@ function QuickStart() {
   }
   return (
     <div>
-      <h1>Quick Start</h1>
+      <h1>RefsrehInterval Kullanımı</h1>
       <hr />
       {data &&
         data.map((video) => (
@@ -31,4 +34,4 @@ function QuickStart() {
   );
 }
 
-export default QuickStart;
+export default RefreshInterval;
