@@ -1,10 +1,20 @@
 import React from "react";
 import "./App.css";
+import { Routes, Route } from "react-router-dom";
+import Axios from "./components/Axios";
+import QuickStart from "./components/QuickStart";
+import Home from "./components/Design/Home";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1>React Hooks useSWR ile veri yakalama</h1>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="quick-start" element={<QuickStart />} />
+        <Route path="axios" element={<Axios />} />
+      </Routes>
     </div>
   );
 }

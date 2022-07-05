@@ -3,7 +3,8 @@
       { "id": 1, "title": "useSWR ile veri yakalama", "author": "Ramazan" },
       { "id": 2, "title": "React Query", "author": "Ramazan" },
       { "id": 3, "title": "Rest API", "author": "Ramazan" },
-      { "id": 4, "title": "Next.js", "author": "Ramazan" }
+      { "id": 4, "title": "Next.js", "author": "Ramazan" },
+      { "id": 5, "title": "Jest Test", "author": "Ramazan" }
 
     ]
   }
