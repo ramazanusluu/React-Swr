@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .nav {
   padding: 20px;
   display: flex;
@@ -18,7 +24,7 @@
   color: #4989f8;
   text-decoration: none;
   font-size: 1.1rem;
-  padding: 3px 16px;
+  margin: 20px;
   display: block;
   font-size: 16px;
   text-decoration: none;

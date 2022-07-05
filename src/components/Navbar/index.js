@@ -18,6 +18,9 @@ function Navbar() {
           <li>
             <Link to="/refreshinterval">RefreshInterval</Link>
           </li>
+          <li>
+            <Link to="/conditional-fetching">Conditional Fetching</Link>
+          </li>
         </ul>
       </nav>
     </div>
