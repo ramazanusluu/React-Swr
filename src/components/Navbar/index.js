@@ -16,13 +16,22 @@ function Navbar() {
             <Link to="/axios">Axios</Link>
           </li>
           <li>
-            <Link to="/refreshinterval">RefreshInterval</Link>
+            <Link to="/Deduplication/user">Deduplication</Link>
+          </li>
+          <li>
+            <Link to="/options">Options</Link>
           </li>
           <li>
             <Link to="/conditional-fetching">Conditional Fetching</Link>
           </li>
           <li>
             <Link to="/dependent">Dependent</Link>
+          </li>
+          <li>
+            <Link to="/pagination">Pagination</Link>
+          </li>
+          <li>
+            <Link to="/mutation">Mutation</Link>
           </li>
         </ul>
       </nav>

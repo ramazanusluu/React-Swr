@@ -1,18 +1,15 @@
 import React from "react";
 import useSWR from "swr";
-import axios from "axios";
+import OptionsNavbar from "../Navbar/OptionsNavbar";
 
 const endpoint = "http://localhost:3000/videos";
-const fetcher = (url) =>
-  axios.get(url).then((res) => {
-    console.log("Working");
-    return res.data;
+
+function RevalidateOnFocus() {
+  const { data, isValidating, error } = useSWR(endpoint, {
+    revalidateOnFocus: false,
   });
 
-function RefreshInterval() {
-  const { data, error } = useSWR(endpoint, fetcher, {
-    refreshInterval: 2,
-  });
+  console.log({ isValidating, data });
 
   if (error) {
     return <div>failed to load</div>;
@@ -20,9 +17,11 @@ function RefreshInterval() {
   if (!data) {
     return <div>loading...</div>;
   }
+
   return (
     <div>
-      <h1>RefsrehInterval Kullanımı</h1>
+      <OptionsNavbar />
+      <h1>RevalidateOnFocus</h1>
       <hr />
       {data &&
         data.map((video) => (
@@ -34,4 +33,4 @@ function RefreshInterval() {
   );
 }
 
-export default RefreshInterval;
+export default RevalidateOnFocus;

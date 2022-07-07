@@ -6,6 +6,9 @@ const endpoint = "http://localhost:3000/videos";
 function ConditionalFetching() {
   const [shouldFetch, setShouldFetch] = useState(true);
   const { data, error } = useSWR(() => (shouldFetch ? endpoint : null));
+  //? shouldFetch'i değeri true ise endpoint'i yakala değilse boş bırak
+
+  //! Belli bir condition(duruma) bağlı olarak veriyi yakalayabiliriz ya da yakalamayabiliriz
 
   if (error) {
     return <div>failed to load</div>;
